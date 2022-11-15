@@ -56,6 +56,22 @@ public class App
         Exercises.ex12();
         System.out.println("\n----------------------------------------");
 
+        System.out.println( "Challenge 1" );
+        Exercises.challenge1();
+        System.out.println("\n----------------------------------------");
+
+        System.out.println( "Challenge 2" );
+        Exercises.challenge2();
+        System.out.println("\n----------------------------------------");
+
+        System.out.println( "Challenge 3" );
+        Exercises.challenge3();
+        System.out.println("\n----------------------------------------");
+
+        System.out.println( "Challenge 4" );
+        Exercises.challenge4();
+
+
         //Final
         System.out.println("\n****************************************\n");
         System.out.println("Code_by\t  : Marius Stoica");

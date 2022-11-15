@@ -43,7 +43,6 @@ public class SuperHero implements Comparable<SuperHero>{
     public void setAge(int age) {
         this.age = age;
     }
-
     public int compareTo(SuperHero superHero){
         if (age == superHero.age){
             return 0;
