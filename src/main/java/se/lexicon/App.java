@@ -8,7 +8,7 @@ public class App
         System.out.println( "Collections Exercises!" );
         System.out.println("****************************************\n");
 
-        /*System.out.println( "Exercise 1" );
+        System.out.println( "Exercise 1" );
         Exercises.ex1();
         System.out.println("----------------------------------------");
 
@@ -66,7 +66,7 @@ public class App
 
         System.out.println( "Challenge 3" );
         Exercises.challenge3();
-        System.out.println("\n----------------------------------------");*/
+        System.out.println("\n----------------------------------------");
 
         System.out.println( "Challenge 4" );
         Exercises.challenge4();

@@ -308,8 +308,6 @@ public class Exercises {
         System.out.println("List numbers : "+ arrNumbers);
         Set <Integer> treeSet = new TreeSet(arrNumbers);
         System.out.println("Without duplicates : "+ treeSet);
-
-
     }
 
 }
