@@ -1,7 +1,6 @@
 package se.lexicon;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
+import java.sql.Array;
 import java.util.*;
 
 public class Exercises {
@@ -239,5 +238,79 @@ public class Exercises {
         }
 
     }
+
+    public static void challenge1() {
+        //1. Create an empty set and populate it with the all the days of the week. Next create a second
+        //set and populate it with ONLY the weekend days (SATURDAY and SUNDAY). Lastly, compare
+        //the two sets and retain in the first set only those days that are the same in both sets.
+        Set<String> weekDays = new HashSet<String>();
+        weekDays.add("Monday");
+        weekDays.add("Tuesday");
+        weekDays.add("Wednesday");
+        weekDays.add("Thursday");
+        weekDays.add("Friday");
+        weekDays.add("Saturday");
+        weekDays.add("Sunday");
+        System.out.println("Week days\t   : " + weekDays);
+
+        Set<String> weekEndDays = new HashSet<String>();
+        weekEndDays.add("Saturday");
+        weekEndDays.add("Sunday");
+        System.out.println("Weekend days   : " + weekEndDays);
+
+        System.out.println("-----------------");
+        weekDays.retainAll(weekEndDays);
+        System.out.println("Common days: " + weekDays);
+    }
+
+    public static void challenge2(){
+        //2. Create a new hashMap of types <String,String> and populate it with elements containing an
+        //email (String) and a name (String). Next, create a new Set and populate it with the keys from
+        //the hashMap you created.
+        HashMap<String, String> hashMap= new HashMap<String, String>();
+        hashMap.put("marius.stoica@yahoo.com","Marius Stoica");
+        hashMap.put("mehrdad.javan@lexicon.se","Mehrdad Javan");
+
+        Set<String> newSet = new HashSet<>();
+        for(Map.Entry m : hashMap.entrySet()) {
+            newSet.add((String) m.getKey());
+        }
+        System.out.println(newSet);
+    }
+    public static void challenge3(){
+        //3. Create a new class and call it SuperHero. Add fields for Id,Name and Age + getters and
+        //setters. Have the class implement the Comparable interface. Implement the override method
+        //and have it compare the AGE of the superhero. Next, create a new arrayList of type
+        //SuperHero. Sort the list by age and print out each element.
+
+        ArrayList<SuperHero> superHeroes = new ArrayList<SuperHero>();
+
+        superHeroes.add(new SuperHero(1,"Joe Biden", 80));
+        superHeroes.add(new SuperHero(2,"Marius Stoica", 42));
+        superHeroes.add(new SuperHero(3,"Mehrdad Javan", 33));
+
+        Collections.sort(superHeroes);
+        for (SuperHero superHero: superHeroes){
+            System.out.println("Id: "+superHero.getId()+" Name: "+ superHero.getName()+"\t Age: "+superHero.getAge());
+        }
+    }
+    public static void challenge4(){
+        //4. Create an array of type int with numbers: {1,4,4,2,6,7}. Next, create an appropriate Collection
+        //and populate it with the content of the int array. Lastly, print out each element in the
+        //Collection without duplicates
+
+        int [] numbers = {1,4,4,2,6,7};
+        System.out.println("Array numbers: "+Arrays.toString(numbers));
+        ArrayList<Integer> arrNumbers = new ArrayList<Integer>();
+        for (int number: numbers){
+            arrNumbers.add(number);
+        }
+        System.out.println("List numbers : "+ arrNumbers);
+        Set <Integer> treeSet = new TreeSet(arrNumbers);
+        System.out.println("Without duplicates : "+ treeSet);
+
+
+    }
+
 }
 
