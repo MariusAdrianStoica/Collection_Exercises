@@ -30,10 +30,30 @@ public class App
 
         System.out.println( "Exercise 6" );
         Exercises.ex6();
-        System.out.println("\n----------------------------------------");*/
+        System.out.println("\n----------------------------------------");
 
         System.out.println( "Exercise 7" );
         Exercises.ex7();
+        System.out.println("\n----------------------------------------");
+
+        System.out.println( "Exercise 8" );
+        Exercises.ex8();
+        System.out.println("\n----------------------------------------");
+
+        System.out.println( "Exercise 9" );
+        Exercises.ex9();
+        System.out.println("\n----------------------------------------");
+
+        System.out.println( "Exercise 10" );
+        Exercises.ex10();
+        System.out.println("\n----------------------------------------");
+
+        System.out.println( "Exercise 11" );
+        Exercises.ex11();
+        System.out.println("\n----------------------------------------");*/
+
+        System.out.println( "Exercise 12" );
+        Exercises.ex12();
         System.out.println("\n----------------------------------------");
 
         //Final

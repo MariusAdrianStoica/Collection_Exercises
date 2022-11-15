@@ -1,12 +1,13 @@
 package se.lexicon;
 
 import java.lang.reflect.Array;
+import java.lang.reflect.Field;
 import java.util.*;
 
 public class Exercises {
 
     public static void ex1() {
-// 1. Create a new list and populate it with the days of the week. Lastly, print the out the list.
+        // 1. Create a new list and populate it with the days of the week. Lastly, print the out the list.
         ArrayList<String> weekDays = new ArrayList<String>();
         weekDays.add("Monday");
         weekDays.add("Tuesday");
@@ -115,7 +116,7 @@ public class Exercises {
     }
 
     public static void ex6(){
-    //6. Create a new hashSet and populate it with the days of the week.
+        //6. Create a new hashSet and populate it with the days of the week.
         // Then convert the hashSet to an arrayList
 
         Set<String> weekDays = new HashSet<String>();
@@ -160,7 +161,83 @@ public class Exercises {
             }
         }
 
-        System.out.println("Sort values: " + arr);
+        System.out.println("Sorted values : " + arr);
+    }
+    public static void ex8(){
+        //8. Create a new hashSet and populate it with random names. Lastly, sort the names in
+        //alphabetical order using only a Set or a child of Set.
+
+        Set<String> randomNames = new HashSet<String>();
+        randomNames.add("Marius");
+        randomNames.add("Mehrdad");
+        randomNames.add("David");
+        randomNames.add("Michael");
+        randomNames.add("Son");
+
+        System.out.println("HashSet values\t   : " + randomNames);
+        Set<String> sortedNames = new TreeSet<String>(randomNames);
+        System.out.println("Sorted with TreeSet: " + sortedNames);
+
+    }
+    public static void ex9(){
+        //9. Create a new hashMap of type <Integer,String> and populate it with elements containing an
+        //id(Integer) and a car brand(String). Lastly, print out the entire hashMap.
+       HashMap<Integer, String> hashMap= new HashMap<Integer, String>();
+       hashMap.put(1,"Volvo");
+       hashMap.put(2,"Mercedes");
+       hashMap.put(3,"BMW");
+       hashMap.put(4,"Tesla");
+       hashMap.put(5,"Dacia");
+       for (Map.Entry m : hashMap.entrySet()){
+           System.out.println("id: "+m.getKey()+"\tcarBrand: "+m.getValue());
+       }
+
+    }
+
+    public static void ex10(){
+        //10. Create a new hashMap of type <Integer,String> and populate it with elements containing an
+        //id(Integer) and a car brand(String). Lastly, print out only the keys.
+
+        HashMap<Integer, String> hashMap= new HashMap<Integer, String>();
+        hashMap.put(1,"Volvo");
+        hashMap.put(2,"Mercedes");
+        hashMap.put(3,"BMW");
+        hashMap.put(4,"Tesla");
+        hashMap.put(5,"Dacia");
+        for (Map.Entry m : hashMap.entrySet()){
+            System.out.println("id: "+m.getKey());
+        }
+    }
+    public static void ex11(){
+        //11. Create a new hashMap of type <Integer,String> and populate it with elements containing an
+        //id(Integer) and a car brand(String). Lastly, print out only the values.
+
+        HashMap<Integer, String> hashMap= new HashMap<Integer, String>();
+        hashMap.put(1,"Volvo");
+        hashMap.put(2,"Mercedes");
+        hashMap.put(3,"BMW");
+        hashMap.put(4,"Tesla");
+        hashMap.put(5,"Dacia");
+        for (Map.Entry m : hashMap.entrySet()){
+            System.out.println("CarBrand: "+m.getValue());
+        }
+    }
+    public static void ex12(){
+        //12. Create a new class and call it Car. Add fields for Id,Brand and Model + getters and setters
+        //Create a new hashMap of type <Integer,Car> and populate it with elements containing an
+        //id(Integer) and a car object(Car). Lastly, print out only the car's brand.
+        HashMap<Integer, Car> hashMap= new HashMap<Integer, Car>();
+        hashMap.put(1,new Car(1000, "Volvo","XC90"));
+        hashMap.put(2,new Car(2000, "Mercedes","GLK"));
+        hashMap.put(3,new Car(3000, "BMW","X6"));
+        hashMap.put(4,new Car(4000, "Tesla","Y"));
+        hashMap.put(5,new Car(5000, "Dacia","Bigster"));
+
+
+        for (Car car : hashMap.values()){
+            System.out.println("CarBrand: "+car.getBrand());
+        }
+
     }
 }
 
