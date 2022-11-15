@@ -1,7 +1,5 @@
 package se.lexicon;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
 import java.util.*;
 
 public class Exercises {
@@ -237,6 +235,37 @@ public class Exercises {
         for (Car car : hashMap.values()){
             System.out.println("CarBrand: "+car.getBrand());
         }
+
+    }
+
+    public static void challenge1() {
+        //1. Create an empty set and populate it with the all the days of the week. Next create a second
+        //set and populate it with ONLY the weekend days (SATURDAY and SUNDAY). Lastly, compare
+        //the two sets and retain in the first set only those days that are the same in both sets.
+        Set<String> weekDays = new HashSet<String>();
+        weekDays.add("Monday");
+        weekDays.add("Tuesday");
+        weekDays.add("Wednesday");
+        weekDays.add("Thursday");
+        weekDays.add("Friday");
+        weekDays.add("Saturday");
+        weekDays.add("Sunday");
+        System.out.println("Week days\t   : " + weekDays);
+
+        Set<String> weekEndDays = new HashSet<String>();
+        weekEndDays.add("Saturday");
+        weekEndDays.add("Sunday");
+        System.out.println("Weekend days   : " + weekEndDays);
+
+        System.out.println("-----------------");
+        weekDays.retainAll(weekEndDays);
+        System.out.println("Common days: " + weekDays);
+    }
+
+    public static void challenge2(){
+        //2. Create a new hashMap of types <String,String> and populate it with elements containing an
+        //email (String) and a name (String). Next, create a new Set and populate it with the keys from
+        //the hashMap you created.
 
     }
 }

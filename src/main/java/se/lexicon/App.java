@@ -50,10 +50,18 @@ public class App
 
         System.out.println( "Exercise 11" );
         Exercises.ex11();
-        System.out.println("\n----------------------------------------");*/
+        System.out.println("\n----------------------------------------");
 
         System.out.println( "Exercise 12" );
         Exercises.ex12();
+        System.out.println("\n----------------------------------------");
+
+        System.out.println( "Challenge 1" );
+        Exercises.challenge1();
+        System.out.println("\n----------------------------------------");*/
+
+        System.out.println( "Challenge 2" );
+        Exercises.challenge2();
         System.out.println("\n----------------------------------------");
 
         //Final
